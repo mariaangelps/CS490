@@ -36,23 +36,6 @@ parameters = {"UCID": "mp352", "section": "103"}
 response = requests.get(url, params=parameters)
 print("GET:", response.json())
 
-""""
-#sending the DELETE request
-parameters = {"UCID": "mp352", "section": "103"}
-response = requests.delete(url, params=parameters)
-print(response.json())
-
-
-#sending the POST request
-response = requests.post(url, json=data)
-print(response.json())
-
-
-#sending another GET request to confirm the changes
-parameters = {"UCID": "mp352", "section": "103"}
-response = requests.get(url, params=parameters)
-print("GET:", response.json())
-"""
 #sending PUT requests 
 data_update = data.copy()
 data_update["favorite_language"] = "JavaScript"
@@ -63,6 +46,7 @@ print("PUT:", response.json())
 parameters = {"UCID": "mp352", "section": "103"}
 response = requests.get(url, params=parameters)
 print("GET:", response.json())
+
 """
 #sending the DELETE request
 parameters = {"UCID": "mp352", "section": "103"}
